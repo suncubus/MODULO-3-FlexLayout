@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;/*Para que todos los elementos ocupen un solo espaciado*/
+    margin:0;
+    padding:0;
+}
+.container{
+    width: 90%;
+    margin:auto;
+}
+header, section, footer{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: black;
+}
+p{
+    background-color: red;
+    height: 4rem;
+    margin: 1rem;
+}
+/*HEADER*/
+.menu-top{
+    display: flex;
+    background-color: grey;
+    padding: 2rem;
+}
+ul li{
+    list-style: none;
+    flex-grow:1;
+    margin: 1rem;
+    background-color: red;
+    height: 4rem;
+}
+.grande{
+    flex-grow:2;
+}
+.parrafo{
+    background-color: yellow;
+    padding: 2rem;
+}
+/*SECTION*/
+section{
+    display:flex;
+    flex-direction: row;
+}
+article{    
+    flex-basis: 80%;
+    background-color: grey;
+    padding: 2rem;
+}
+.bloque{
+    display:flex;
+    flex-direction: row;     
+}
+.contenido{
+    flex-grow:1;
+}
+aside{
+    flex-basis: 20%;
+    background-color: green;
+    padding: 2rem;
+}
+
+
+/*tablet*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    section{
+        flex-direction: column;
+    }
+}
+/*movil*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    section{
+        flex-direction: column;
+    }
+    .menu-top{
+        flex-direction:column;
+    }
+    .bloque{
+        flex-direction: column;     
+    }
+    
+}
